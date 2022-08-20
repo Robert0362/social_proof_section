@@ -2,11 +2,175 @@
 {
 --VeryDarkMagenta: hsl(300, 43%, 22%);
 --SoftPink: hsl(333, 80%, 67%);
---DarkGrayishMagenta: hsl(303, 10%, 53%);
+--DarkGrayishMagenta: hsl(300, 13%, 85%);
 --LightGrayishMagenta: hsl(300, 24%, 96%);
 --White: hsl(0, 0%, 100%);
 }
 body
 {
-    font-size:15px;   
+    font-size:15px;  
+    background-color: var(--White);
+    font-family: 'League Spartan';
 }
+.container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:1rem;
+    padding:1rem;
+    grid-template-areas:
+        'header'
+        'reviews'
+        'users';
+}
+.head
+{
+    text-align: center;
+    padding:1rem 3rem 3rem 3rem;
+    color:var(--VeryDarkMagenta);
+    grid-area: header;
+}
+.title
+{
+    text-align: center;
+    font-weight: 700;
+}
+.review
+{
+    background-color: var(--DarkGrayishMagenta);
+    border-radius: .5rem;
+    margin:1rem;
+    grid-area: reviews;
+}
+.review p{
+    padding: .25rem;
+    color:var(--VeryDarkMagenta);
+    font-weight: 700;
+    text-align: center;
+}
+.stars
+{
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+}
+.users
+{
+    grid-area: users;
+    margin:1rem;
+
+}
+.card
+{
+    background-color: var(--VeryDarkMagenta);
+    border-radius: .5rem;
+    padding:.75rem;
+    color:var(--White);
+    margin-bottom:1rem;
+}
+.card p
+{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+.usertitle
+{
+    color: var(--SoftPink);
+}
+.buyerOne
+{
+    
+}
+.buyerTwo
+{
+    
+}
+.buyerThree
+{
+
+}
+.id
+{
+    display: flex;
+    padding-top: 1.25rem;
+}
+img
+{
+    border-radius: 50%;
+    width: 80%;
+}
+.cardHeader
+{
+    display: inline-block;
+    padding:0rem 2rem;
+}
+.name
+{
+    display: inline-block;
+    line-height: .15rem;
+    text-align:right;
+}
+@media(min-width:900px){
+    .container
+        {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap:1rem;
+            padding:1rem;
+            grid-template-areas:
+            'header reviews'
+            'users  users'
+            'users  users';
+            margin-bottom: .25rem;
+        }
+    .head{
+        margin: .25rem;
+        text-align: left;
+    }
+    .review{
+        margin-top:2rem;
+        width: 55%;
+        padding-left:4rem;
+        padding-right:0rem;
+    }
+    
+    .users{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:1rem;
+    }
+    .title{
+        font-size: 52px;
+        margin:.25rem 6rem .25rem.25rem;
+        text-align: left;
+    }
+    .head p{
+        font-size: 18px;
+        margin:1.25rem 6rem .25rem.25rem;
+    }
+    .buyerTwo{
+        margin-top:.75rem;
+        margin-bottom:-.75rem
+    }
+    .buyerThree{
+        margin-top:1.5rem;
+        margin-bottom:-1.5rem
+    }
+    .guru{
+        margin-left:4rem;
+    }
+    .bestTech{
+        margin-left:8rem;
+    }
+    .stars{
+        display:inline-block;
+    }
+    .review p{
+        display:inline-block;
+        margin-left:2rem;
+
+    }
+}    
